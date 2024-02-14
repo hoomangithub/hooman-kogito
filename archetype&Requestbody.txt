@@ -1,0 +1,19 @@
+mvn archetype:generate -DarchetypeGroupId=org.kie.kogito -DarchetypeArtifactId=kogito-spring-boot-archetype -DarchetypeVersion=1.43.0.Final -DgroupId=de.hooman.kogito.kogitoeasysample -DartifactId=hooman-kogito -Dversion=1.0-SNAPSHOT
+
+
+POST: http://localhost:8080/greetings
+Body: {}
+
+
+POST: http://localhost:8080/TrafficViolation
+Body:
+{
+	"Driver": {
+		"Points": 2
+	},
+	"Violation": {
+		"Type": "speed",
+		"Actual Speed": 120,
+		"Speed Limit": 100
+	}
+}
